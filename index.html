@@ -1,33 +1,18 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="tu_codigo_aqui" />
     <title>Reloj Digital</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #222;
-            color: #fff;
-        }
-        .reloj {
-            font-size: 5rem;
-        }
-    </style>
+    <!-- Enlace al archivo de estilo externo -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="reloj" id="reloj"></div>
 
-    <script>
-        function actualizarReloj() {
-            const reloj = document.getElementById('reloj');
-            const now = new Date();
-            const horas = String(now.getHours()).padStart(2, '0');
-            const minutos = String(now.getMinutes()).padStart(2, '0');
-            const segundos = String(now.getSeconds()).pad
+    <div class="reloj" id="reloj">00:00:00</div>
+
+    <!-- Enlace al archivo de script externo -->
+    <script src="script.js"></script>
+
+</body>
+</html>

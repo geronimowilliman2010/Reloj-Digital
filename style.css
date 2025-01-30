@@ -1,20 +1,17 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    color: white;
-    text-align: center;
-    margin-top: 20%;
-}
-
-#reloj {
-    font-size: 60px;
-    padding: 20px;
-    background-color: #444;
-    border-radius: 10px;
-    display: inline-block;
-}
-
-h1 {
+    font-family: 'Orbitron', sans-serif; /* Fuente moderna tipo digital */
+    background-color: #333; /* Fondo gris oscuro */
+    color: #fff; /* Letra blanca */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    font-size: 80px;
+}
+
+.reloj {
+    font-size: 100px; /* Tamaño grande de la hora */
+    letter-spacing: 5px; /* Espaciado entre los números */
+    text-align: center;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.5); /* Sombra luminosa */
 }
