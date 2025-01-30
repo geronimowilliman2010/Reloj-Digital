@@ -1,19 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
-<head><meta name="google-site-verification" content="uWt4tEUzbkiQ3t_lnaCLihxrP9idMNEIiwtEWA8EUYQ" />
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content=<meta name="google-site-verification" content="uWt4tEUzbkiQ3t_lnaCLihxrP9idMNEIiwtEWA8EUYQ" /> />
     <title>Reloj Digital</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #222;
+            color: #fff;
+        }
+        .reloj {
+            font-size: 5rem;
+        }
+    </style>
 </head>
 <body>
-    <div id="reloj">
-        <h1 id="hora">00:00:00</h1>
-    </div>
-    
-    <script src="script.js"></script>
-</body>
-</html>
-    
-    
-    
+    <div class="reloj" id="reloj"></div>
+
+    <script>
+        function actualizarReloj() {
+            const reloj = document.getElementById('reloj');
+            const now = new Date();
+            const horas = String(now.getHours()).padStart(2, '0');
+            const minutos = String(now.getMinutes()).padStart(2, '0');
+            const segundos = String(now.getSeconds()).pa
