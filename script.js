@@ -1,15 +1,15 @@
-function actualizarHora() {
+function actualizarReloj() {
     const ahora = new Date();
-    let horas = ahora.getHours();
-    let minutos = ahora.getMinutes();
-    let segundos = ahora.getSeconds();
+    let horas = ahora.getHours().toString().padStart(2, '0');
+    let minutos = ahora.getMinutes().toString().padStart(2, '0');
+    let segundos = ahora.getSeconds().toString().padStart(2, '0');
 
-    horas = horas < 10 ? '0' + horas : horas;
-    minutos = minutos < 10 ? '0' + minutos : minutos;
-    segundos = segundos < 10 ? '0' + segundos : segundos;
+    document.getElementById('reloj').textContent = `${horas}:${minutos}:${segundos}`;
 
-    const tiempo = `${horas}:${minutos}:${segundos}`;
-    document.getElementById('reloj').innerHTML = tiempo;
+    // Ajustar el tiempo de actualización para que sea exacto al segundo
+    const milisegundosHastaElSiguienteSegundo = 1000 - ahora.getMilliseconds();
+    setTimeout(actualizarReloj, milisegundosHastaElSiguienteSegundo);
 }
 
-setInterval(actualizarHora, 1000);
+// Llamada inicial para actualizar inmediatamente
+actualizarReloj();
